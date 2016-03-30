@@ -1,0 +1,6 @@
+- tocks: 1
+  lights:
+    l_c_time_lock: ff
+- tocks: 1
+  lights:
+    l_c_time_lock: 00

@@ -1,0 +1,54 @@
+- tocks: 1
+  lights:
+    l_bonus_1k: ff
+- tocks: 1
+  lights:
+    l_bonus_2k: ff
+- tocks: 1
+  lights:
+    l_bonus_3k: ff
+- tocks: 1
+  lights:
+    l_bonus_4k: ff
+- tocks: 1
+  lights:
+    l_bonus_5k: ff
+- tocks: 1
+  lights:
+    l_bonus_6k: ff
+- tocks: 1
+  lights:
+    l_bonus_7k: ff
+- tocks: 1
+  lights:
+    l_bonus_8k: ff
+- tocks: 1
+  lights:
+    l_bonus_9k: ff
+- tocks: 1
+  lights:
+    l_bonus_1k: 0
+- tocks: 1
+  lights:
+    l_bonus_2k: 0
+- tocks: 1
+  lights:
+    l_bonus_3k: 0
+- tocks: 1
+  lights:
+    l_bonus_4k: 0
+- tocks: 1
+  lights:
+    l_bonus_5k: 0
+- tocks: 1
+  lights:
+    l_bonus_6k: 0
+- tocks: 1
+  lights:
+    l_bonus_7k: 0
+- tocks: 1
+  lights:
+    l_bonus_8k: 0
+- tocks: 1
+  lights:
+    l_bonus_9k: 0

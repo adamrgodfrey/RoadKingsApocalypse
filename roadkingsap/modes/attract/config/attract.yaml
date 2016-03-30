@@ -1,0 +1,22 @@
+#config_version=3
+
+show_player:
+  mode_attract_started:
+    - show: attract_dmd_loop
+      repeat: yes
+      tocks_per_sec: 1
+
+light_player:
+    mode_attract_started:
+      - show: 1_9_k_light_show
+        repeat: yes
+        tocks_per_sec: 2
+      - show: road_kings_letters_light_show
+        repeat: yes
+        tocks_per_sec: 2
+
+    mode_attract_stopped:
+      - show: 1_9_k_light_show
+        action: stop
+      - show: road_kings_letters_light_show
+        action: stop

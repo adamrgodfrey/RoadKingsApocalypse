@@ -1,0 +1,636 @@
+#config_version=3
+hardware:
+    platform: p_roc
+    driverboards: snux
+
+dmd:
+    physical: no
+    width: 128
+    height: 32
+
+window:
+    elements:
+      - type: virtualdmd
+        width: 512
+        height: 128
+        h_pos: center
+        v_pos: center
+        pixel_color: ff6600
+        dark_color: 220000
+        pixel_spacing: 1
+      - type: shape
+        shape: box
+        width: 516
+        height: 132
+        color: aaaaaa
+        thickness: 2
+      - type: text
+        font: tall title
+        text: Road Kings Appocolpyse
+        h_pos: center
+        v_pos: top
+        y: 60
+        size: 100
+        antialias: yes
+        layer: 1
+        color: ee9900
+
+modes:
+  - base
+  - attract
+  - skill_shot
+  - high_score
+  #- credit
+
+shots:
+  shot_r_target:
+    switch: s_r_target
+    light: l_r_target
+    profile: hit_me
+  shot_o_target:
+    switch: s_o_target
+    light: l_o_target
+    profile: hit_me
+  shot_a_target:
+    switch: s_a_target
+    light: l_a_target
+    profile: hit_me
+  shot_d_target:
+    switch: s_d_target
+    light: l_d_target
+    profile: hit_me
+  shot_k_target:
+    switch: s_k_target
+    light: l_k_target
+    profile: hit_me
+  shot_shot_i_target:
+    switch: s_i_target
+    light: l_i_target
+    profile: hit_me
+  shot_n_target:
+    switch: s_n_target
+    light: l_n_target
+    profile: hit_me
+  shot_g_target:
+    switch: s_g_target
+    light: l_g_target
+    profile: hit_me
+  shot_s_target:
+    switch: s_s_target
+    light: l_s_target
+    profile: hit_me
+  shot_lane_1:
+    switch: s_lane_1
+    light: l_lane_1
+    profile: hit_me
+  shot_lane_2:
+    switch: s_lane_2
+    light: l_lane_2
+    profile: hit_me
+  shot_lane_3:
+    switch: s_lane_1
+    light: l_lane_1
+    profile: hit_me
+  shot_lane_4:
+    switch: s_lane_4
+    light: l_lane_4
+    profile: hit_me
+  shot_right_orbit_made:
+    switch_sequence: s_r_rollunder, s_l_rollunder
+    time: 2s
+  shot_right_ramp_made:
+    switch_sequence: s_r_ramp_enter, s_r_ramp_left
+    time: 2s
+    tags: ramp
+  shot_left_loop_made:
+    switch: s_l_rollunder
+
+shot_groups:
+  group_rollover_lanes:
+    shots: shot_lane_1, shot_lane_2, shot_lane_3, shot_lane_4
+    rotate_left_events: s_l_flipper_eos_active
+    rotate_right_events: s_r_flipper_eos_active
+    reset_events: group_rollover_lanes_default_lit_complete
+    enable_events: ball_started
+    disable_events: ball_ending
+
+shot_profiles:
+    hit_me:
+        states:
+          - name: lit
+            light_script: flash
+          - name: complete
+            light_script: "on"
+    hit_me_out:
+        states:
+          - name: lit
+            light_script: flash_fast
+          - name: complete
+            light_script: "off"
+    light_me:
+        states:
+          - name: unlit
+            light_script: "off"
+          - name: lit
+            light_script: "on"
+
+scoring:
+    group_rollover_lanes_default_unlit_hit:
+        score: 2500
+    group_rollover_lanes_default_lit_hit:
+        score: 100
+    group_rollover_lanes_default_lit_complete:
+        score: 10000
+
+light_scripts:
+    flash:
+        - tocks: 1
+          color: ff
+        - tocks: 1
+          color: 0
+    flash_fast:
+        - tocks: .5
+          color: ff
+        - tocks: .5
+          color: 0
+    on:
+        - tocks: 1
+          color: ff
+    off:
+        - tocks: 1
+          color: 0
+
+ball_saves:
+  default:
+    active_time: 10s
+    hurry_up_time: 2s
+    grace_period: 2s
+    enable_events: mode_base_started
+    timer_start_events: balldevice_plunger_lane_ball_eject_success
+    auto_launch: no
+    balls_to_save: 1
+    debug: yes
+
+ball_devices:
+    outhole:
+        ball_switches: s_outhole
+        eject_coil: c_outhole
+        entrance_count_delay: 300ms
+        confirm_eject_type: target
+        eject_targets: trough
+        tags: drain
+    trough:
+        ball_switches: s_r_trough, s_l_trough
+        eject_coil: c_ball_trough_feeder
+        entrance_count_delay: 300ms
+        confirm_eject_type: target
+        eject_targets: plunger_lane
+        tags: home, trough
+    plunger_lane:
+        ball_switches: s_ball_shooter
+        mechanical_eject: true
+        tags: home, ball_add_live
+        eject_timeouts: 3s
+    center_eject:
+        ball_switches: s_c_eject
+        eject_coil: c_center_eject_hole
+        eject_timeouts: 500ms
+    left_eject:
+        ball_switches: s_l_eject
+        eject_coil: c_left_eject_hole
+        eject_timeouts: 500ms
+
+switches:
+    s_plumb_bob_tilt:
+      number: S11
+      label: Plumb Bob Tilt
+    s_r_target:
+        number: S21
+        label: R Target
+        tags: playfield_active
+    s_s_target:
+        number: S31
+        label: S Target
+        tags: playfield_active
+    s_l_jet:
+        number: S41
+        label: Left Jet Bumper
+        tags: playfield_active
+    s_r_10_point:
+        number: S51
+        label: Right 10 point
+        tags: playfield_active
+    s_r_trough:
+        number: S61
+        label: Right Trough
+        tags: playfield_active
+    s_ball_roll_tilt:
+        number: S12
+        label: Ball Roll Tilt
+    s_o_target:
+        number: S22
+        label: O Target
+        tags: playfield_active
+    s_lane_1:
+        number: S32
+        label: Lane 1
+        tags: playfield_active
+    s_r_jet:
+        number: S42
+        label: Right Jet Bumper
+        tags: playfield_active
+    s_upper_left_kicker:
+        number: S52
+        label: Upper Left Kicker
+    s_l_trough:
+        number: S62
+        label: Left Trough
+    s_credit_button:
+        number: S13
+        label: Credit Button
+        tags: start
+    s_a_target:
+        number: S23
+        label: A Target
+        tags: playfield_active
+    s_lane_2:
+        number: S33
+        label: Lane 2
+        tags: playfield_active
+    s_bottom_jet:
+        number: S43
+        label: Bottom Jet Bumper
+        tags: playfield_active
+    s_r_rollunder:
+        number: S53
+        label: Right Roll Under
+        tags: playfield_active
+    s_l_kicker:
+        number: S63
+        label: Left Kicker
+        tags: playfield_active
+    s_r_coin:
+        number: S14
+        label: Right Coin Shoot
+    s_d_target:
+        number: S24
+        label: D Target
+        tags: playfield_active
+    s_lane_4:
+        number: S34
+        label: Lane 4
+        tags: playfield_active
+    s_l_outlane:
+        number: S44
+        label: Left Outlane
+        tags: playfield_active
+    s_l_rollunder:
+        number: S54
+        label: Left Rollunder
+        tags: playfield_active
+    s_r_kicker:
+        number: S64
+        label: Right Kicker
+    s_c_coin:
+        number: S15
+        label: Center Coin Shoot
+    s_k_target:
+        number: S25
+        label: K Target
+        tags: playfield_active
+    s_lane_3:
+        number: S35
+        label: Lane 3
+        tags: playfield_active
+    s_r_outlane:
+        number: S45
+        label: Right Outlane
+        tags: playfield_active
+    s_l_eject:
+        number: S55
+        label: Left Eject
+    s_l_10_point:
+        number: S65
+        label: Left 10 Point
+        tags: playfield_active
+    s_l_coin:
+        number: S16
+        label: Left Coin Shoot
+    s_i_target:
+        number: S26
+        label: I Target
+        tags: playfield_active
+    s_r_ramp_enter:
+        number: S36
+        label: Right Ramp Enter
+        tags: playfield_active
+    s_drop_target:
+        number: S46
+        label: Drop Target
+        tags: playfield_active
+    s_c_eject:
+        number: S56
+        label: Center Eject
+        tags: playfield_active
+    s_pf_tilt:
+        number: S66
+        label: Playfield Tilt
+        tags: playfield_active
+    s_r_ramp_left:
+        number: s76
+        tags: playfield_active
+    s_slam_tilt:
+        number: S17
+        label: Slam Tilt
+    s_n_target:
+        number: S27
+        label: N Target
+        tags: playfield_active
+    s_ramp_raise_eos:
+        number: S37
+        label: Ramp Raise EOS
+        tags: playfield_active
+    s_c_ramp_enter:
+        number: S47
+        label: Center Ramp Enter
+        tags: playfield_active
+    s_ball_shooter:
+        number: S57
+        label: Ball Shooter
+    s_l_flipper_eos:
+        number: S67
+        label: Left Flipper EOS
+        tags: left_flipper
+    s_hi_score_reset:
+        number: S18
+        label: High Score Reset
+    s_g_target:
+        number: S28
+        label: G Target
+        tags: playfield_active
+    s_top_jet:
+        number: S38
+        label: Top Jet Bumper
+        tags: playfield_active
+    s_cent_ramp_r_exit:
+        number: S48
+        label: Center Ramp Right Exit
+        tags: playfield_active
+    s_outhole:
+        number: S58
+        label: Outhole
+    s_r_flipper_eos:
+        number: S68
+        label: Right Flipper EOS
+        tags: right_flipper
+
+system11:
+  ac_relay_delay_ms: 75
+  ac_relay_driver_number: c12
+
+coils:
+  c_outhole:
+    number: c01
+  c_ball_trough_feeder:
+    number: c02
+    pulse_ms: 20
+  c_left_eject_hole:
+    number: c03
+  c_center_eject_hole:
+    number: c04
+  c_upper_left_kicker:
+    number: c05c
+  c_power_kicker_l_outlane:
+    number: c06
+  c_l_gate:
+    number: c09
+  c_r_gate:
+    number: c10
+  c_gen_illumination_relay:
+    number: c11
+  c_sol_select_relay:
+    number: c12
+  c_knocker:
+    number: c13a
+  c_ramp_up:
+    number: c13c
+  c_ramp_down:
+    number: c14c
+  c_drop_target:
+    number: c15c
+  c_coin_lockout:
+    number: c16
+  c_left_kicker:
+    number: c17
+  c_right_kicker:
+    number: c18
+  c_upper_jet_bumper:
+    number: c19
+  c_left_jet_bumper:
+    number: c20
+  c_right_jet_bumper:
+    number: c21
+  c_lower_jet_bumper:
+    number: c22
+
+flashers:
+  f_rear_playfield_flashers:
+    number: c05a
+  f_l_lightining_bolt:
+    number: c07
+  f_r_lightining_bolt:
+    number: c08
+  f_mid_insert_board:
+    number: c14a
+  f_bikes_flasher:
+    number: c15a
+
+matrix_lights:
+    l_game_over_backbox:
+        number: L11
+    l_match_backbox:
+        number: L12
+    l_shoot_again_backbox:
+        number: L13
+    l_ball_in_play_backbox:
+        number: L14
+    l_hold_bonus:
+        number: L15
+    l_spots_letter:
+        number: L16
+    l_left_lock:
+        number: L17
+    l_center_lock:
+        number: L18
+    l_r_target:
+        number: L21
+    l_o_target:
+        number: L22
+    l_a_target:
+        number: L23
+    l_d_target:
+        number: L24
+    l_k_target:
+        number: L25
+    l_i_target:
+        number: L26
+    l_n_target:
+        number: L27
+    l_g_target:
+        number: L28
+    l_s_target:
+        number: L31
+    l_lane_1:
+        number: L32
+    l_lane_2:
+        number: L33
+    l_lane_4:
+        number: L34
+    l_lane_3:
+        number: L35
+    l_bonus_hold_when_lit:
+        number: L36
+    l_all_scores_doubled:
+        number: L37
+    l_l_collect_detour:
+        number: L38
+    l_r_collect_detour:
+        number: L:41
+    l_l_time_lock:
+        number: L:42
+    l_c_time_lock:
+        number: L:43
+    l_power_kick:
+        number: L:44
+    l_r_special:
+        number: L:45
+    l_l_special:
+        number: L:46
+    l_r_time_lock:
+        number: L:47
+    l_r_lock:
+        number: L:48
+    l_r_extra_ball:
+        number: L:51
+    l_mega_score:
+        number: L:52
+    l_2x:
+        number: L:53
+    l_3x:
+        number: L:54
+    l_4x:
+        number: L:55
+    l_5x:
+        number: L:56
+    l_bonus_10k:
+        number: L:57
+    l_bonus_20k:
+        number: L:58
+    l_bonus_40k:
+        number: L:61
+    l_bonus_60k:
+        number: L:62
+    l_bonus_80k:
+        number: L:63
+    l_cruise_again:
+        number: L:64
+    l_bonus_1k:
+        number: L:65
+    l_bonus_2k:
+        number: L:66
+    l_bonus_3k:
+        number: L:67
+    l_bonus_4k:
+        number: L:68
+    l_bonus_5k:
+        number: L:71
+    l_bonus_6k:
+        number: L:72
+    l_bonus_7k:
+        number: L:73
+    l_bonus_8k:
+        number: L:74
+    l_bonus_9k:
+        number: L:75
+    l_center_extra_ball:
+        number: L:76
+    l_detour_when_lit:
+        number: L:77
+
+driver_enabled:
+    playfield_devices:
+        number: c23
+
+autofire_coils:
+  left_slingshot:
+    coil: c_left_kicker
+    switch: s_l_kicker
+  right_slingshot:
+    coil: c_right_kicker
+    switch: s_r_kicker
+  upper_jet:
+    coil: c_upper_jet_bumper
+    switch: s_top_jet
+  left_jet:
+    coil: c_left_jet_bumper
+    switch: s_l_jet
+  right_jet:
+    coil: c_right_jet_bumper
+    switch: s_r_jet
+  lower_jet:
+    coil: c_lower_jet_bumper
+    switch: s_bottom_jet
+  kick_back:
+    coil: c_power_kicker_l_outlane
+    switch: s_l_outlane
+
+virtual_platform_start_active_switches:
+    s_r_trough
+    s_l_trough
+
+keyboard:
+    z:
+        switch: s_l_flipper_eos
+    /:
+        switch: s_r_flipper_eos
+    1:
+        switch: s_r_trough
+        toggle: true
+    2:
+        switch: s_l_trough
+        toggle: true
+    p:
+        switch: s_ball_shooter
+        toggle: true
+    c:
+        switch: s_credit_button
+    q:
+        switch: s_lane_1
+    w:
+        switch: s_lane_2
+    e:
+        switch: s_lane_3
+    t:
+        switch: s_lane_4
+    r:
+        switch: s_r_target
+    o:
+        switch: s_o_target
+    a:
+        switch: s_a_target
+    d:
+        switch: s_d_target
+    k:
+        switch: s_k_target
+    i:
+        switch: s_i_target
+    n:
+        switch: s_n_target
+    g:
+        switch: s_g_target
+    s:
+        switch: s_s_target
+    0:
+        switch: s_outhole
+    x:
+        switch: s_c_eject

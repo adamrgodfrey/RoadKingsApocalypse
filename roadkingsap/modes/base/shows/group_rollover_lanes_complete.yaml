@@ -1,0 +1,12 @@
+- tocks: 1
+  lights:
+    l_lane_1: ff
+    l_lane_2: 00
+    l_lane_3: ff
+    l_lane_4: 00
+- tocks: 1
+  lights:
+    l_lane_1: 00
+    l_lane_2: ff
+    l_lane_3: 00
+    l_lane_4: ff

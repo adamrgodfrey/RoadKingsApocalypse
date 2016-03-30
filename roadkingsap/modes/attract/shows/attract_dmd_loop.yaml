@@ -1,0 +1,103 @@
+
+- tocks: 2
+  display:
+    - type: text
+      text: WHO WILL CHALLENGE...
+      size: 9
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+- tocks: 3
+  display:
+    - type: text
+      text: THE ROAD KINGS!!
+      size: 12
+      transition:
+        type: move_out
+        duration: 1s
+        direction: left
+- tocks: 3
+  display:
+    - type: Text
+      text: PRESS START
+      decorators:
+        type: blink
+        repeats: -1
+        on_secs: .5
+        off_secs: .5
+    - type: Text
+      text: FREE PLAY
+      color: 00ff00
+      v_pos: bottom
+      font: small
+      transition:
+        type: move_in
+        duration: 1s
+        direction: right
+- tocks: 5
+  display:
+    - type: Text
+      text: GAME OVER
+      decorators:
+        type: blink
+        repeats: -1
+        on_secs: .25
+        off_secs: .25
+      transition:
+        type: move_in
+        duration: 1s
+        direction: bottom
+- tocks: 3
+  display:
+    - type: Text
+      text: BOOM GO PINBALL
+      color: ff0000
+      transition:
+        type: move_in
+        duration: 1s
+        direction: top
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
+- tocks: 2
+  display:
+    - type: text
+      text: "%machine|score1_label%"
+      v_pos: top
+      y: 4
+    - type: text
+      text: "%machine|score1_name% %machine|score1_value%"
+      v_pos: bottom
+      number_grouping: true
+      y: -3
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
+    - type: shape
+      shape: box
+      width: 126
+      height: 30
+      shade: 8
+- tocks: 2
+  display:
+    - type: text
+      text: "1. %machine|score2_name% %machine|score2_value%"
+      v_pos: top
+      h_pos: left
+      number_grouping: true
+      y: 3
+      x: 12
+    - type: text
+      text: "2. %machine|score3_name% %machine|score3_value%"
+      v_pos: bottom
+      h_pos: left
+      number_grouping: true
+      y: -3
+      x: 10
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top

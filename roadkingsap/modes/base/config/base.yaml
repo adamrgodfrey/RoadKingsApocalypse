@@ -1,0 +1,118 @@
+#config_version=3
+mode:
+    start_events: ball_starting
+    priority: 100
+
+slide_player:
+  mode_base_started:
+    - type: text
+      text: "%score%"
+      number_grouping: true
+      min_digits: 2
+      v_pos: center
+      transition:
+          type: move_in
+    - type: text
+      text: PLAYER %number%
+      v_pos: bottom
+      h_pos: left
+      font: small
+    - type: text
+      text: BALL %ball%
+      v_pos: bottom
+      h_pos: right
+      font: small
+    - type: text
+      text: "%machine|credits_string%"
+      v_pos: bottom
+      h_pos: center
+      font: small
+
+light_player:
+  group_rollover_lanes_default_lit_complete:
+    show: group_rollover_lanes_complete
+    tocks_per_sec: 20
+    repeat: yes
+    num_repeats: 10
+    priority: 1
+
+scoring:
+    group_rollover_lanes_default_unlit_hit:
+        score: 2500
+    group_rollover_lanes_default_lit_hit:
+        score: 100
+    group_rollover_lanes_default_lit_complete:
+        score: 10000
+    s_r_10_point_active:
+        score: 10
+    s_l_10_point_active:
+        score: 10
+    s_l_kicker_active:
+        score: 1000
+    s_r_kicker_active:
+        score: 1000
+    s_r_target_active:
+        score: 10000
+    s_o_target_active:
+        score: 10000
+    s_a_target_active:
+        score: 10000
+    s_d_target_active:
+        score: 10000
+    s_k_target_active:
+        score: 10000
+    s_i_target_active:
+        score: 10000
+    s_n_target_active:
+        score: 10000
+    s_g_target_active:
+        score: 10000
+    s_s_target_active:
+        score: 10000
+    s_lane_1_active:
+        score: 2000
+    s_lane_2_active:
+        score: 2000
+    s_lane_3_active:
+        score: 2000
+    s_lane_4_active:
+        score: 2000
+    s_top_jet_active:
+        score: 2000
+    s_r_jet_active:
+        score: 2000
+    s_l_jet_active:
+        score: 2000
+    s_bottom_jet_active:
+        score: 2000
+    s_drop_target_activeL:
+        score: 5000
+    s_r_rollunder_active:
+        score: 2500
+    s_l_rollunder_active:
+        score: 2500
+    s_r_outlane_active:
+        score: 20000
+    s_upper_left_kicker_active:
+        score: 4000
+    s_l_eject_active:
+        score: 4000
+    s_c_eject_active:
+        score: 4000
+    s_r_ramp_enter_active:
+        score: 1000
+    s_r_ramp_left_active:
+        score: 1000
+    s_c_ramp_enter_active:
+        score: 1000
+    s_cent_ramp_r_exit:
+        score: 1000
+
+shot_groups:
+  group_rollover_lanes:
+    shots: shot_lane_1, shot_lane_2, shot_lane_3, shot_lane_4
+    rotate_left_events: s_l_flipper_eos_active
+    rotate_right_events: s_r_flipper_eos_active
+    reset_events: group_rollover_lanes_default_lit_complete
+    enable_events: ball_started
+    disable_events: ball_ending
