@@ -7,6 +7,7 @@ slide_player:
   mode_base_started:
     - type: text
       text: "%score%"
+      color: ff0000
       number_grouping: true
       min_digits: 2
       v_pos: center
@@ -14,6 +15,7 @@ slide_player:
           type: move_in
     - type: text
       text: PLAYER %number%
+      color: 1a1aff
       v_pos: bottom
       h_pos: left
       font: small
@@ -22,6 +24,7 @@ slide_player:
       v_pos: bottom
       h_pos: right
       font: small
+      color: ff0000      
     - type: text
       text: "%machine|credits_string%"
       v_pos: bottom

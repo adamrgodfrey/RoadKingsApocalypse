@@ -1,7 +1,7 @@
 events:
   ball_search_begin_phase1: 0
   game_ended: 0
-  game_started: 28
+  game_started: 30
 player:
   score:
     average: 0
@@ -33,7 +33,7 @@ switches:
   s_c_eject: 8
   s_c_ramp_enter: 0
   s_cent_ramp_r_exit: 0
-  s_credit_button: 102
+  s_credit_button: 104
   s_d_target: 76
   s_drop_target: 0
   s_g_target: 38

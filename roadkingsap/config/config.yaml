@@ -1,12 +1,19 @@
 #config_version=3
 hardware:
-    platform: p_roc
-    driverboards: snux
+    platform: virtual
+    #platform: p_roc
+    #driverboards: snux
+    dmd: smartmatrix
 
 dmd:
-    physical: no
+    physical: yes
     width: 128
     height: 32
+    type: color
+
+smartmatrix:
+    port: com12
+    use_separate_thread: yes
 
 window:
     elements:
@@ -22,7 +29,7 @@ window:
         shape: box
         width: 516
         height: 132
-        color: aaaaaa
+        color: ff0000
         thickness: 2
       - type: text
         font: tall title
@@ -33,7 +40,7 @@ window:
         size: 100
         antialias: yes
         layer: 1
-        color: ee9900
+        color: 3333ff
 
 modes:
   - base

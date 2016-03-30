@@ -4,23 +4,24 @@
     - type: text
       text: WHO WILL CHALLENGE...
       size: 9
+      color: ff00ff
       transition:
         type: move_out
         duration: 1s
         direction: left
 - tocks: 3
   display:
-    - type: text
-      text: THE ROAD KINGS!!
-      size: 12
+    - type: Image
+      image: RKtest
       transition:
         type: move_out
         duration: 1s
-        direction: left
+        direction: right
 - tocks: 3
   display:
     - type: Text
       text: PRESS START
+      color: 00ff00
       decorators:
         type: blink
         repeats: -1
@@ -28,7 +29,7 @@
         off_secs: .5
     - type: Text
       text: FREE PLAY
-      color: 00ff00
+      color: 00ffff
       v_pos: bottom
       font: small
       transition:
@@ -39,11 +40,16 @@
   display:
     - type: Text
       text: GAME OVER
+      color: ffff00
       decorators:
         type: blink
         repeats: -1
         on_secs: .25
         off_secs: .25
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
       transition:
         type: move_in
         duration: 1s
@@ -101,3 +107,11 @@
         type: move_out
         duration: 1s
         direction: top
+- tocks: 3
+  display:
+    - type: Image
+      image: RKtest2
+      transition:
+        type: move_in
+        duration: 1s
+        direction: bottom
