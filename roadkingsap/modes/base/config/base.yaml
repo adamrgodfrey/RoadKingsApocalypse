@@ -3,6 +3,18 @@ mode:
     start_events: ball_starting
     priority: 100
 
+event_player:
+    ball_starting:
+        cmd_flippers_enable
+    ball_ending:
+        cmd_flippers_disable
+    tilt:
+        cmd_flippers_disable
+        c_gen_illumination_relay
+
+    slam_tilt:
+        cmd_flippers_disable
+
 slide_player:
   mode_base_started:
     - type: text
@@ -24,7 +36,7 @@ slide_player:
       v_pos: bottom
       h_pos: right
       font: small
-      color: ff0000      
+      color: ff0000
     - type: text
       text: "%machine|credits_string%"
       v_pos: bottom

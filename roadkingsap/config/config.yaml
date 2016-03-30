@@ -15,6 +15,11 @@ smartmatrix:
     port: com12
     use_separate_thread: yes
 
+Fonts:
+    biker_title:
+        file: MotorcycleEmptiness.ttf
+        antialias: yes
+
 window:
     elements:
       - type: virtualdmd
@@ -33,7 +38,7 @@ window:
         thickness: 2
       - type: text
         font: tall title
-        text: Road Kings Appocolpyse
+        text: Road Kings Apocalpyse
         h_pos: center
         v_pos: top
         y: 60
@@ -47,6 +52,7 @@ modes:
   - attract
   - skill_shot
   - high_score
+  - tilt
   #- credit
 
 shots:
@@ -211,6 +217,7 @@ switches:
     s_plumb_bob_tilt:
       number: S11
       label: Plumb Bob Tilt
+      tags: tilt
     s_r_target:
         number: S21
         label: R Target
@@ -342,13 +349,13 @@ switches:
     s_pf_tilt:
         number: S66
         label: Playfield Tilt
-        tags: playfield_active
+        tags: playfield_active, tilt
     s_r_ramp_left:
         number: s76
         tags: playfield_active
     s_slam_tilt:
         number: S17
-        label: Slam Tilt
+        label: slam_tilt
     s_n_target:
         number: S27
         label: N Target
