@@ -1,0 +1,24 @@
+- tocks: 1
+  lights:
+    l_bonus_hold_when_lit: ff
+- tocks: 1
+  lights:
+    l_bonus_hold_when_lit: 0
+- tocks: 1
+  lights:
+    l_l_time_lock: ff
+- tocks: 1
+  lights:
+    l_l_time_lock: 0
+- tocks: 1
+  lights:
+    l_left_lock: ff
+- tocks: 1
+  lights:
+    l_left_lock: 0
+- tocks: 1
+  lights:
+    l_l_time_lock: ff
+- tocks: 1
+  lights:
+    l_l_time_lock: 0

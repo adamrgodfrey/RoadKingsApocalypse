@@ -1,0 +1,28 @@
+- tocks: 1
+  lights:
+    l_r_time_lock: ff
+- tocks: 1
+  lights:
+    l_r_time_lock: 0
+- tocks: 1
+  lights:
+    l_r_lock: ff
+- tocks: 1
+  lights:
+    l_r_lock: 0
+- tocks: 1
+  lights:
+    l_r_extra_ball: ff
+- tocks: 1
+  lights:
+    l_r_extra_ball: 0
+    l_r_lock: ff
+- tocks: 1
+  lights:
+    l_r_lock: 0
+- tocks: 1
+  lights:
+    l_r_time_lock: ff
+- tocks: 1
+  lights:
+    l_r_time_lock: 0

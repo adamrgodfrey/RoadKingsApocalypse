@@ -1,0 +1,48 @@
+- tocks: 1
+  lights:
+    l_r_lock: ff
+- tocks: 1
+  lights:
+    l_r_lock: 0
+- tocks: 1
+  lights:
+    l_left_lock: ff
+- tocks: 1
+  lights:
+    l_left_lock: 0
+- tocks: 1
+  lights:
+    l_center_lock: ff
+- tocks: 1
+  lights:
+    l_center_lock: 0
+- tocks: 1
+  lights:
+    l_left_lock: ff
+    l_r_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_left_lock: 0
+    l_r_lock: 0
+    l_center_lock: 0
+- tocks: 1
+  lights:
+    l_left_lock: ff
+    l_r_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_left_lock: 0
+    l_r_lock: 0
+    l_center_lock: 0
+- tocks: 1
+  lights:
+    l_left_lock: ff
+    l_r_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_left_lock: 0
+    l_r_lock: 0
+    l_center_lock: 0           

@@ -1,0 +1,72 @@
+- tocks: 1
+  lights:
+    l_center_extra_ball: ff
+- tocks: .25
+  lights:
+    l_center_extra_ball: 0
+- tocks: 1
+  lights:
+    l_detour_when_lit: ff
+- tocks: .25
+  lights:
+    l_detour_when_lit: 0
+- tocks: 1
+  lights:
+    l_spots_letter: ff
+- tocks: .25
+  lights:
+    l_spots_letter: 0
+- tocks: 1
+  lights:
+    l_c_time_lock: ff
+- tocks: .25
+  lights:
+    l_c_time_lock: 0
+- tocks: 1
+  lights:
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_center_lock: 0
+- tocks: .25
+  lights:
+    l_center_extra_ball: ff
+    l_detour_when_lit: ff
+    l_spots_letter: ff
+    l_c_time_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_center_extra_ball: 0
+    l_detour_when_lit: 0
+    l_spots_letter: 0
+    l_c_time_lock: 0
+    l_center_lock: 0
+- tocks: .25
+  lights:
+    l_center_extra_ball: ff
+    l_detour_when_lit: ff
+    l_spots_letter: ff
+    l_c_time_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_center_extra_ball: 0
+    l_detour_when_lit: 0
+    l_spots_letter: 0
+    l_c_time_lock: 0
+    l_center_lock: 0
+- tocks: .25
+  lights:
+    l_center_extra_ball: ff
+    l_detour_when_lit: ff
+    l_spots_letter: ff
+    l_c_time_lock: ff
+    l_center_lock: ff
+- tocks: .25
+  lights:
+    l_center_extra_ball: 0
+    l_detour_when_lit: 0
+    l_spots_letter: 0
+    l_c_time_lock: 0
+    l_center_lock: 0

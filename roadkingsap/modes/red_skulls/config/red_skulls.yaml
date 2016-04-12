@@ -1,0 +1,40 @@
+#config_version=3
+mode:
+    start_events: ROAD_KINGS_COMPLETED
+    stop_events: timer_red_skulls_complete
+    priority: 300
+
+scoring:
+    s_r_jet:
+        score: 100000|block
+    s_l_jet:
+        score: 100000|block
+    s_top_jet:
+        score: 100000|block
+    s_bottom_jet:
+        score: 100000|block
+
+#ADD bonus for every pop hit
+#ADD Weapon enjancement, add 3k to ever bonus hit
+
+timers:
+    red_skulls:
+        start_value: 60
+        direction: down
+        control_events:
+          - event: balldevice_playfield_ball_enter
+            action: start
+
+light_player:
+    mode_red_skulls_started:
+      - show: bonus_V_light_show
+        repeat: yes
+        tocks_per_sec: 4
+    mode_skill_shot_stopped:
+      - show: bonus_V_light_show
+        action: stop
+
+slide_player:
+    timer_the_end_tick:
+        type: text
+        text: "Time Left: %ticks%"

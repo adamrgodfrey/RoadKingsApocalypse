@@ -1,0 +1,158 @@
+#config_version=3
+mode:
+    start_events: #? Mode select
+    stop_events: timer_last_humanity_complete, ball_ending, shot_shot_10_complete
+    priority: 300
+#scoring:
+    shot_opening_shot_complete:
+        score: 3000|block
+    shot_shot_2_complete:
+        score: 4000|block
+    shot_shot_3_complete:
+        score: 5000|block
+    shot_shot_4_complete:
+        score: 6000|block
+    shot_shot_5_complete:
+        score: 7000|block
+    shot_shot_6_complete:
+        score: 8000|block
+    shot_shot_7_complete:
+        score: 9000|block
+    shot_shot_8_complete:
+        score: 10000|block
+    shot_shot_9_complete:
+        score: 11000|block
+    shot_shot_10_complete:
+        score: 1000000|block
+    shot_shot_11_complete:
+        score: 13000|block
+    shot_shot_13_complete:
+        score: 14000|block
+    shot_shot_14_complete:
+        score: 15000|block
+    shot_shot_15_complete:
+        score: 16000|block
+    shot_shot_16_complete:
+        score: 17000|block
+    shot_shot_17_complete:
+        score: 18000|block
+    shot_shot_18_complete:
+        score: 19000|block
+    shot_shot_19_complete:
+        score: 20000|block
+    shot_shot_20_complete:
+        score: 21000|block
+#ADD time for every sucessful shot
+
+shots:
+  opening_shot:
+    switch: s_upper_left_kicker
+    light: l_mega_score
+    profile: hit_me
+#then
+  shot_2:
+    switch: s_l_rollunder
+    light: l_bonus_hold_when_lit
+    profile: hit_me
+# then
+  shot_3:
+    switch: s_c_eject
+    light: l_center_lock
+    profile: hit_me
+# then
+  shot_4:
+    switch: s_l_eject
+    light: l_l_time_lock
+    profile: hit_me
+# then
+activate c_ramp_up
+  shot_5:
+    switch: s_r_rollunder
+    light: l_r_lock
+    profile: hit_me
+# then
+active c_ramp_down
+  shot_6:
+    switch: s_drop_target
+    light: l_detour_when_lit
+    profile: hit_me
+#Play light show : 1_9_k_light_show
+active c_ramp_down
+# then
+  shot_7:
+    switch: s_cent_ramp_r_exit
+    light: l_lane_3
+    profile: hit_me
+#then
+  shot_8:
+    switch: s_l_outlane
+    light: l_lane_4
+    profile: hit_me
+#stop light show : 1_9_k_light_show
+# then
+  shot_7:
+    switch: s_cent_ramp_r_exit
+    light: l_lane_3
+    profile: hit_me
+#then
+  shot_8:
+    switch: s_l_outlane
+    light: l_lane_4
+    profile: hit_me
+# then
+  shot_9:
+    switch: s_r_target
+    light: l_r_target
+    profile: hit_me
+#then
+  shot_10:
+    switch: s_k_target
+    light: l_k_target
+    profile: hit_me
+timers:
+  last_humanity:
+        start_value: 20
+        direction: down
+        control_events:
+          - event: balldevice_playfield_ball_enter
+            action: start
+
+light_player:
+
+slide_player:
+    timer_the_end_tick:
+    - type: text
+      text: "Time Left: %ticks%"
+  mode_last_humanity_started:
+    - type: text
+      text: "%score%"
+      color: ff0000
+      number_grouping: true
+      min_digits: 2
+      v_pos: center
+      transition:
+          type: move_in
+    - type: text
+      text: PLAYER %number%
+      color: 1a1aff
+      v_pos: bottom
+      h_pos: left
+      font: small
+    - type: text
+      text: BALL %ball%
+      v_pos: bottom
+      h_pos: right
+      font: small
+      color: ff0000
+    - type: text
+      text: "%machine|credits_string%"
+      v_pos: bottom
+      h_pos: center
+      font: small
+shot_profiles:
+    hit_me:
+        states:
+          - name: lit
+            light_script: flash
+          - name: complete
+            light_script: "off"

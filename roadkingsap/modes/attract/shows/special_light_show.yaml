@@ -1,0 +1,36 @@
+- tocks: 1
+  lights:
+    l_l_special: ff
+- tocks: .25
+  lights:
+    l_l_special: 0
+- tocks: 1
+  lights:
+    l_r_special: ff
+- tocks: .25
+  lights:
+    l_r_special: 0
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+- tocks: .25
+  lights:
+    l_cruise_again: 0
+- tocks: 1
+  lights:
+    l_l_special: ff
+- tocks: .25
+  lights:
+    l_l_special: 0
+- tocks: 1
+  lights:
+    l_r_special: ff
+- tocks: .25
+  lights:
+    l_r_special: 0
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+- tocks: .25
+  lights:
+    l_cruise_again: 0             
