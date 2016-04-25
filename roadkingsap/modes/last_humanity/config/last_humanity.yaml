@@ -1,9 +1,10 @@
 #config_version=3
 mode:
     start_events: #? Mode select
-    stop_events: timer_last_humanity_complete, ball_ending, shot_shot_10_complete
+    stop_events: timer_last_humanity_complete, ball_ending, shot_10_complete
     priority: 300
-#scoring:
+
+scoring:
     shot_opening_shot_complete:
         score: 3000|block
     shot_shot_2_complete:
@@ -24,24 +25,6 @@ mode:
         score: 11000|block
     shot_shot_10_complete:
         score: 1000000|block
-    shot_shot_11_complete:
-        score: 13000|block
-    shot_shot_13_complete:
-        score: 14000|block
-    shot_shot_14_complete:
-        score: 15000|block
-    shot_shot_15_complete:
-        score: 16000|block
-    shot_shot_16_complete:
-        score: 17000|block
-    shot_shot_17_complete:
-        score: 18000|block
-    shot_shot_18_complete:
-        score: 19000|block
-    shot_shot_19_complete:
-        score: 20000|block
-    shot_shot_20_complete:
-        score: 21000|block
 #ADD time for every sucessful shot
 
 shots:
@@ -49,76 +32,228 @@ shots:
     switch: s_upper_left_kicker
     light: l_mega_score
     profile: hit_me
+    stop_events: opening_shot_complete
 #then
   shot_2:
     switch: s_l_rollunder
     light: l_bonus_hold_when_lit
     profile: hit_me
+    start_events: opening_shot_complete
+    stop_events: shot_2_complete
 # then
   shot_3:
     switch: s_c_eject
     light: l_center_lock
     profile: hit_me
+    start_events: shot_2_complete
+    stop_events: shot_3_complete
 # then
   shot_4:
     switch: s_l_eject
     light: l_l_time_lock
     profile: hit_me
-# then
-activate c_ramp_up
+    start_events: shot_3_complete
+    stop_events: shot_4_complete
+# then activate c_ramp_up
   shot_5:
     switch: s_r_rollunder
     light: l_r_lock
     profile: hit_me
-# then
-active c_ramp_down
+    start_events: shot_4_complete
+    stop_events: shot_5_complete
+# then active c_ramp_down
   shot_6:
     switch: s_drop_target
     light: l_detour_when_lit
     profile: hit_me
+    start_events: shot_5_complete
+    stop_events: shot_6_complete
 #Play light show : 1_9_k_light_show
-active c_ramp_down
 # then
   shot_7:
     switch: s_cent_ramp_r_exit
     light: l_lane_3
     profile: hit_me
+    start_events: shot_6_complete
+    stop_events: shot_7_complete
 #then
   shot_8:
     switch: s_l_outlane
     light: l_lane_4
     profile: hit_me
+    start_events: shot_7_complete
+    stop_events: shot_8_complete
 #stop light show : 1_9_k_light_show
-# then
-  shot_7:
-    switch: s_cent_ramp_r_exit
-    light: l_lane_3
-    profile: hit_me
-#then
-  shot_8:
-    switch: s_l_outlane
-    light: l_lane_4
-    profile: hit_me
 # then
   shot_9:
     switch: s_r_target
     light: l_r_target
     profile: hit_me
+    start_events: shot_8_complete
+    stop_events: shot_9_complete
 #then
   shot_10:
     switch: s_k_target
     light: l_k_target
     profile: hit_me
+    start_events: shot_9_complete
+    stop_events: shot_10_complete
 timers:
   last_humanity:
         start_value: 20
+        end_value: 0
         direction: down
+        tick_interval: 1s
         control_events:
           - event: balldevice_playfield_ball_enter
             action: start
+          - event: shot_1_complete
+            action: ADD
+            value: 5
+          - event: shot_2_complete
+            action: ADD
+            value: 10
+          - event: shot_3_complete
+            action: ADD
+            value: 5
+          - event: shot_4_complete
+            action: ADD
+            value: 10
+          - event: shot_5_complete
+            action: ADD
+            value: 5
+          - event: shot_6_complete
+            action: ADD
+            value: 10
+          - event: shot_7_complete
+            action: ADD
+            value: 5
+          - event: shot_8_complete
+            action: ADD
+            value: 10
+          - event: shot_9_complete
+            action: ADD
+            value: 5
+
+Logic_Blocks:
+
+    raise_ramp_up:
+        events:
+            - shot_4_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+    lower_ramp:
+        events:
+            - shot_5_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+    reset_drop_target:
+        events:
+            - ball_started, shot_5_complete, shot_6_complete, shot_7_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+      left_lightning_bolt_flash:
+          events:
+              - shot_1_complete, shot_6_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+      right_lightning_bolt_flash:
+          events:
+              - shot_2_complete, shot_7_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+      rear_playfield_flash:
+          events:
+              - shot_3_complete, shot_8_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+      mid_insert_board_flash:
+          events:
+              - shot_4_complete, shot_9_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
+      bikes_flash:
+          events:
+              - shot_5_complete, shot_10_complete
+        enable_events: ball_started
+        disable_events: ball_ended
+        reset_events: ball_ended
+
 
 light_player:
-
+    shot_6_active:
+      - show: 1_9_k_light_show
+        repeat: yes
+        tocks_per_sec: 2
+    shot_8_complete:
+      - show: 1_9_k_light_show
+        action: stop
+    shot_1_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_2_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_3_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_4_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_5_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_6_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_7_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_8_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_9_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 4
+    shot_10_complete:
+      - show: 1_9_k_light_show
+        repeat: no
+        tocks_per_sec: 6
+    shot_10_complete:
+      - show: road_kings_letters_light_show
+        repeat: no
+        tocks_per_sec: 6
+    shot_10_complete:
+      - show: center_ramp_light_show
+        repeat: no
+        tocks_per_sec: 6
+    shot_10_complete:
+      - show: bonus_V_light_show
+        repeat: no
+        tocks_per_sec: 6
 slide_player:
     timer_the_end_tick:
     - type: text

@@ -213,6 +213,67 @@ ball_devices:
         eject_coil: c_left_eject_hole
         eject_timeouts: 500ms
 
+#sound_player:
+#    Lane_sound_off:
+#        sound: FILE NAME
+#        start_events: s_lane_1_active, s_lane_2_active, s_lane_3_active, s_lane_4_active
+#        stop_events: ball_ending
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+#    Pops_Blow_Out:
+#        sound: FILE NAME
+#        start_events: s_top_jet_active, s_bottom_jet_active, s_l_jet_active, s_r_jet_active
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+#    Road_Letters:
+#        sound: FILE NAME
+#        start_events: s_r_target_active, s_o_target_active, s_a_target_active, s_d_target_active
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+#    Kings_Letters:
+#        sound: FILE NAME
+#        start_events: s_k_target_active, s_i_target_active, s_n_target_active, s_g_target_active, s_g_target_active
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+#    Kick_Outs:
+#        sound: FILE NAME
+#        start_events: s_c_eject_active, s_l_eject_active, s_upper_left_kicker_active
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+#    Slings_Ahhh
+#        sound: FILE NAME
+#        start_events: s_l_kicker_active, s_r_kicker_active
+#        duration:
+#        loops: 0
+#        priority:
+#        fade_in: 0
+#        fade_out: 0
+#        volume: 1
+
+
+
+
+
 switches:
     s_plumb_bob_tilt:
       number: S11
@@ -418,20 +479,35 @@ coils:
     number: c06
   c_l_gate:
     number: c09
+    allow_enable: true
+    enable_events: d_l_gate_enable
+    disable_events: d_l_gate_disable
   c_r_gate:
     number: c10
+    allow_enable: true
+    enable_events: d_r_gate_enable
+    disable_events: d_r_gate_disable
   c_gen_illumination_relay:
     number: c11
+    allow_enable: true
+    enable_events: gen_illum__disable
+    disable_events: gen_illum_enable
   c_sol_select_relay:
     number: c12
   c_knocker:
     number: c13a
   c_ramp_up:
     number: c13c
+    pulse_events: raise_ramp_up
+    pulse_ms: 20ms
   c_ramp_down:
     number: c14c
+    pulse_events: lower_ramp
+    pulse_ms: 20ms
   c_drop_target:
     number: c15c
+    pulse_events: reset_drop_target
+    pulse_ms: 20ms
   c_coin_lockout:
     number: c16
   c_left_kicker:
@@ -450,14 +526,24 @@ coils:
 flashers:
   f_rear_playfield_flashers:
     number: c05a
-  f_l_lightining_bolt:
+    pulse_events: rear_playfield_flash
+    pulse_ms: 500ms
+  f_l_lightning_bolt:
     number: c07
-  f_r_lightining_bolt:
+    pulse_events: left_lightning_bolt_flash
+    pulse_ms: 500ms
+  f_r_lightning_bolt:
     number: c08
+    pulse_events: right_lightning_bolt_flash
+    pulse_ms: 500ms
   f_mid_insert_board:
     number: c14a
+    pulse_events: mid_insert_board_flash
+    pulse_ms: 500ms
   f_bikes_flasher:
     number: c15a
+    pulse_events: bikes_flash
+    pulse_ms: 500ms
 
 matrix_lights:
     l_game_over_backbox:
