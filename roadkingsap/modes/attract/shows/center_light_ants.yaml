@@ -1,0 +1,30 @@
+- tocks: 1
+  lights:
+    l_bonus_1k: ff
+    l_bonus_2k: 0
+    l_bonus_3k: ff
+    l_bonus_4k: 0
+    l_bonus_5k: ff
+    l_bonus_6k: 0
+    l_bonus_7k: ff
+    l_bonus_8k: 0
+    l_bonus_9k: ff
+    l_bonus_10k: 0
+    l_center_extra_ball: ff
+    l_detour_when_lit: 0
+    l_spots_letter: ff
+- tocks: 1
+  lights:
+    l_bonus_1k: 0
+    l_bonus_2k: ff
+    l_bonus_3k: 0
+    l_bonus_4k: ff
+    l_bonus_5k: 0
+    l_bonus_6k: ff
+    l_bonus_7k: 0
+    l_bonus_8k: ff
+    l_bonus_9k: 0
+    l_bonus_10k: ff
+    l_center_extra_ball: 0
+    l_detour_when_lit: ff
+    l_spots_letter: 0   

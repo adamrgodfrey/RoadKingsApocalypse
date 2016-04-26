@@ -1,0 +1,22 @@
+- tocks: 1
+  lights:
+    l_r_target: ff
+    l_o_target: 0
+    l_a_target: ff
+    l_d_target: 0
+    l_k_target: ff
+    l_i_target: 0
+    l_n_target: ff
+    l_g_target: 0
+    l_s_target: ff
+- tocks: 1
+  lights:
+    l_r_target: 0
+    l_o_target: ff
+    l_a_target: 0
+    l_d_target: ff
+    l_k_target: 0
+    l_i_target: ff
+    l_n_target: 0
+    l_g_target: ff
+    l_s_target: 0
