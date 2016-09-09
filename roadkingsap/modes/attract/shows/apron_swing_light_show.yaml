@@ -27,4 +27,94 @@
     l_cruise_again: 0
     l_lane_3: 0
     l_r_special: 0
-    l_r_collect_detour: 0              
+    l_r_collect_detour: 0
+- tocks: 1
+  lights:
+    l_r_collect_detour: ff
+- tocks: 1
+  lights:
+    l_lane_3: ff
+    l_r_special: ff
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+- tocks: 1
+  lights:
+    l_lane_4: ff
+    l_l_special: ff
+- tocks: 1
+  lights:
+    l_power_kick: ff
+- tocks: 1
+  lights:
+    l_l_collect_detour: ff
+- tocks: 1
+  lights:
+    l_l_collect_detour: 0
+    l_power_kick: 0
+    l_lane_4: 0
+    l_l_special: 0
+    l_cruise_again: 0
+    l_lane_3: 0
+    l_r_special: 0
+    l_r_collect_detour: 0
+- tocks: 1
+  lights:
+    l_l_collect_detour: ff
+- tocks: 1
+  lights:
+    l_power_kick: ff
+    l_l_collect_detour: 0
+- tocks: 1
+  lights:
+    l_power_kick: 0
+    l_lane_4: ff
+    l_l_special: ff
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+    l_lane_4: 0
+    l_l_special: 0
+- tocks: 1
+  lights:
+    l_cruise_again: 0
+    l_lane_3: ff
+    l_r_special: ff
+- tocks: 1
+  lights:
+    l_lane_3: 0
+    l_r_special: 0
+    l_r_collect_detour: ff
+- tocks: 1
+  lights:
+    l_r_collect_detour: 0
+- tocks: 1
+  lights:
+    l_r_collect_detour: ff
+- tocks: 1
+  lights:
+    l_r_collect_detour: 0
+    l_lane_3: ff
+    l_r_special: ff
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+    l_lane_3: 0
+    l_r_special: 0
+- tocks: 1
+  lights:
+    l_cruise_again: 0
+    l_lane_4: ff
+    l_l_special: ff
+- tocks: 1
+  lights:
+    l_lane_4: 0
+    l_l_special: 0
+    l_power_kick: ff
+- tocks: 1
+  lights:
+    l_l_collect_detour: ff
+    l_power_kick: 0
+- tocks: 1
+  lights:
+    l_l_collect_detour: 0     

@@ -82,30 +82,6 @@
     l_bonus_40k: 0
     l_bonus_60k: 0
     l_bonus_80k: 0
-  - tocks: .25
-    lights:
-      l_5x: ff
-      l_4x: ff
-      l_3x: ff
-      l_2x: ff
-      l_all_scores_doubled: ff
-      l_hold_bonus: ff
-      l_bonus_20k: ff
-      l_bonus_40k: ff
-      l_bonus_60k: ff
-      l_bonus_80k: ff
-  - tocks: .25
-    lights:
-      l_5x: 0
-      l_4x: 0
-      l_3x: 0
-      l_2x: 0
-      l_all_scores_doubled: 0
-      l_hold_bonus: 0
-      l_bonus_20k: 0
-      l_bonus_40k: 0
-      l_bonus_60k: 0
-      l_bonus_80k: 0
 - tocks: .25
   lights:
     l_5x: ff
@@ -153,4 +129,28 @@
     l_bonus_20k: 0
     l_bonus_40k: 0
     l_bonus_60k: 0
-    l_bonus_80k: 0                
+    l_bonus_80k: 0
+- tocks: .25
+  lights:
+    l_5x: ff
+    l_4x: ff
+    l_3x: ff
+    l_2x: ff
+    l_all_scores_doubled: ff
+    l_hold_bonus: ff
+    l_bonus_20k: ff
+    l_bonus_40k: ff
+    l_bonus_60k: ff
+    l_bonus_80k: ff
+- tocks: .25
+  lights:
+    l_5x: 0
+    l_4x: 0
+    l_3x: 0
+    l_2x: 0
+    l_all_scores_doubled: 0
+    l_hold_bonus: 0
+    l_bonus_20k: 0
+    l_bonus_40k: 0
+    l_bonus_60k: 0
+    l_bonus_80k: 0

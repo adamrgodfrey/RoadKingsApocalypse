@@ -1,0 +1,91 @@
+- tocks: 1
+  lights:
+    l_l_collect_detour: ff
+    l_r_collect_detour: ff
+- tocks: 1
+  lights:
+    l_power_kick: ff
+    l_l_collect_detour: 0
+    l_r_collect_detour: 0
+- tocks: 1
+  lights:
+    l_power_kick: 0
+    l_lane_4: ff
+    l_l_special: ff
+    l_lane_3: ff
+    l_r_special: ff
+- tocks: 1
+  lights:
+    l_cruise_again: ff
+    l_lane_4: 0
+    l_l_special: 0
+- tocks: 1
+  lights:
+    l_bonus_1k: ff
+- tocks: 1
+  lights:
+    l_bonus_2k: ff
+    l_bonus_1k: 0
+- tocks: 1
+  lights:
+    l_bonus_3k: ff
+    l_bonus_2k: 0
+- tocks: 1
+  lights:
+    l_bonus_4k: ff
+    l_bonus_3k: 0
+- tocks: 1
+  lights:
+    l_bonus_5k: ff
+    l_bonus_4k: 0
+- tocks: 1
+  lights:
+    l_bonus_6k: ff
+    l_bonus_5k: 0
+- tocks: 1
+  lights:
+    l_bonus_7k: ff
+    l_bonus_6k: 0
+- tocks: 1
+  lights:
+    l_bonus_8k: ff
+    l_bonus_7k: 0
+- tocks: 1
+  lights:
+    l_bonus_9k: ff
+    l_bonus_8k: 0
+- tocks: 1
+  lights:
+    l_bonus_10k: ff
+    l_5x: ff
+    l_bonus_80k: ff
+    l_bonus_9k: 0
+- tocks: 1
+  lights:
+    l_center_extra_ball: ff
+    l_4x: ff
+    l_bonus_60k: ff
+    l_bonus_10k: 0
+    l_5x: 0
+    l_bonus_80k: 0
+- tocks: 1
+  lights:
+    l_detour_when_lit: ff
+    l_3x: ff
+    l_bonus_40k: ff
+    l_center_extra_ball: 0
+    l_4x: 0
+    l_bonus_60k: 0
+- tocks: 1
+  lights:
+    l_spots_letter: ff
+    l_2x: ff
+    l_bonus_20k: ff
+    l_detour_when_lit: 0
+    l_3x: 0
+    l_bonus_40k: 0
+- tocks: 1
+  lights:
+    l_spots_letter: 0
+    l_2x: 0
+    l_bonus_20k: 0
