@@ -53,6 +53,10 @@ modes:
   #- high_score
   - tilt
   #- credit
+  #- bonus
+  #- last_humanity
+  #- red_skulls
+  #- the_beginning_of_the_end
 
 shots:
   shot_r_target:
@@ -138,7 +142,7 @@ shot_profiles:
         states:
           - name: lit
             light_script: flash_fast
-            tocks_per_sec: 50            
+            tocks_per_sec: 50
           - name: complete
             light_script: "off"
     light_me:
