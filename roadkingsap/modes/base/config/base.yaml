@@ -46,7 +46,7 @@ slide_player:
 light_player:
   group_rollover_lanes_default_lit_complete:
     show: group_rollover_lanes_complete
-    tocks_per_sec: 40
+    tocks_per_sec: 50
     repeat: yes
     num_repeats: 10
     priority: 1
@@ -57,7 +57,7 @@ scoring:
     group_rollover_lanes_default_lit_hit:
         score: 100
     group_rollover_lanes_default_lit_complete:
-        score: 10000
+        score: 1000000
     s_r_10_point_active:
         score: 10
     s_l_10_point_active:
