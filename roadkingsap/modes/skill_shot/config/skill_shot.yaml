@@ -10,7 +10,7 @@ scoring:
 
 timers:
     skill_shot:
-        start_value: 8
+        start_value: 12
         direction: down
         control_events:
           - event: balldevice_playfield_ball_enter
@@ -20,7 +20,7 @@ light_player:
     mode_skill_shot_started:
       - show: flash_c_time_lock
         repeat: yes
-        tocks_per_sec: 4
+        tocks_per_sec: 30
     mode_skill_shot_stopped:
       - show: flash_c_time_lock
         action: stop

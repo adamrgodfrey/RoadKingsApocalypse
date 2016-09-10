@@ -1,64 +1,64 @@
-- tocks: 1
+- tocks: 4
   lights:
     l_5x: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_4x: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_3x: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_2x: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_all_scores_doubled: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_hold_bonus: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_20k: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_40k: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_60k: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_80k: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_5x: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_4x: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_3x: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_2x: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_all_scores_doubled: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_hold_bonus: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_20k: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_40k: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_60k: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_bonus_80k: 0
-- tocks: .25
+- tocks: 1
   lights:
     l_5x: ff
     l_4x: ff
@@ -70,55 +70,7 @@
     l_bonus_40k: ff
     l_bonus_60k: ff
     l_bonus_80k: ff
-- tocks: .25
-  lights:
-    l_5x: 0
-    l_4x: 0
-    l_3x: 0
-    l_2x: 0
-    l_all_scores_doubled: 0
-    l_hold_bonus: 0
-    l_bonus_20k: 0
-    l_bonus_40k: 0
-    l_bonus_60k: 0
-    l_bonus_80k: 0
-  - tocks: .25
-    lights:
-      l_5x: ff
-      l_4x: ff
-      l_3x: ff
-      l_2x: ff
-      l_all_scores_doubled: ff
-      l_hold_bonus: ff
-      l_bonus_20k: ff
-      l_bonus_40k: ff
-      l_bonus_60k: ff
-      l_bonus_80k: ff
-  - tocks: .25
-    lights:
-      l_5x: 0
-      l_4x: 0
-      l_3x: 0
-      l_2x: 0
-      l_all_scores_doubled: 0
-      l_hold_bonus: 0
-      l_bonus_20k: 0
-      l_bonus_40k: 0
-      l_bonus_60k: 0
-      l_bonus_80k: 0
-- tocks: .25
-  lights:
-    l_5x: ff
-    l_4x: ff
-    l_3x: ff
-    l_2x: ff
-    l_all_scores_doubled: ff
-    l_hold_bonus: ff
-    l_bonus_20k: ff
-    l_bonus_40k: ff
-    l_bonus_60k: ff
-    l_bonus_80k: ff
-- tocks: .25
+- tocks: 1
   lights:
     l_5x: 0
     l_4x: 0
@@ -130,7 +82,7 @@
     l_bonus_40k: 0
     l_bonus_60k: 0
     l_bonus_80k: 0
-- tocks: .25
+- tocks: 1
   lights:
     l_5x: ff
     l_4x: ff
@@ -142,7 +94,7 @@
     l_bonus_40k: ff
     l_bonus_60k: ff
     l_bonus_80k: ff
-- tocks: .25
+- tocks: 1
   lights:
     l_5x: 0
     l_4x: 0
@@ -153,4 +105,52 @@
     l_bonus_20k: 0
     l_bonus_40k: 0
     l_bonus_60k: 0
-    l_bonus_80k: 0                
+    l_bonus_80k: 0
+- tocks: 1
+  lights:
+    l_5x: ff
+    l_4x: ff
+    l_3x: ff
+    l_2x: ff
+    l_all_scores_doubled: ff
+    l_hold_bonus: ff
+    l_bonus_20k: ff
+    l_bonus_40k: ff
+    l_bonus_60k: ff
+    l_bonus_80k: ff
+- tocks: 1
+  lights:
+    l_5x: 0
+    l_4x: 0
+    l_3x: 0
+    l_2x: 0
+    l_all_scores_doubled: 0
+    l_hold_bonus: 0
+    l_bonus_20k: 0
+    l_bonus_40k: 0
+    l_bonus_60k: 0
+    l_bonus_80k: 0
+- tocks: 1
+  lights:
+    l_5x: ff
+    l_4x: ff
+    l_3x: ff
+    l_2x: ff
+    l_all_scores_doubled: ff
+    l_hold_bonus: ff
+    l_bonus_20k: ff
+    l_bonus_40k: ff
+    l_bonus_60k: ff
+    l_bonus_80k: ff
+- tocks: 1
+  lights:
+    l_5x: 0
+    l_4x: 0
+    l_3x: 0
+    l_2x: 0
+    l_all_scores_doubled: 0
+    l_hold_bonus: 0
+    l_bonus_20k: 0
+    l_bonus_40k: 0
+    l_bonus_60k: 0
+    l_bonus_80k: 0

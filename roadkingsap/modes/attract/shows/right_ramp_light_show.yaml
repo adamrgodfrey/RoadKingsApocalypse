@@ -1,72 +1,72 @@
-- tocks: 1
+- tocks: 4
   lights:
     l_r_time_lock: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_r_time_lock: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_r_lock: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_r_lock: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_r_extra_ball: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_r_extra_ball: 0
-- tocks: 1
+- tocks: 4
   lights:
     l_mega_score: ff
-- tocks: 1
+- tocks: 4
   lights:
     l_mega_score: 0
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: ff
     l_r_lock: ff
     l_r_extra_ball: ff
     l_mega_score: ff
-- tocks: .25
-  lights:
-    l_r_time_lock: 0
-    l_r_lock: 0
-    l_r_extra_ball: 0
-    l_mega_score: 0
-- tocks: .25
-  lights:
-    l_r_time_lock: ff
-    l_r_lock: ff
-    l_r_extra_ball: ff
-    l_mega_score: ff
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: 0
     l_r_lock: 0
     l_r_extra_ball: 0
     l_mega_score: 0
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: ff
     l_r_lock: ff
     l_r_extra_ball: ff
     l_mega_score: ff
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: 0
     l_r_lock: 0
     l_r_extra_ball: 0
     l_mega_score: 0
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: ff
     l_r_lock: ff
     l_r_extra_ball: ff
     l_mega_score: ff
-- tocks: .25
+- tocks: 1
   lights:
     l_r_time_lock: 0
     l_r_lock: 0
     l_r_extra_ball: 0
-    l_mega_score: 0           
+    l_mega_score: 0
+- tocks: 1
+  lights:
+    l_r_time_lock: ff
+    l_r_lock: ff
+    l_r_extra_ball: ff
+    l_mega_score: ff
+- tocks: 1
+  lights:
+    l_r_time_lock: 0
+    l_r_lock: 0
+    l_r_extra_ball: 0
+    l_mega_score: 0

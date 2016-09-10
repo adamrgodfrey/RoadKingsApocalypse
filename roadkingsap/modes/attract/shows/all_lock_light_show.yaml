@@ -21,7 +21,7 @@
     l_left_lock: ff
     l_r_lock: ff
     l_center_lock: ff
-- tocks: .25
+- tocks: 2
   lights:
     l_left_lock: 0
     l_r_lock: 0
@@ -31,7 +31,7 @@
     l_left_lock: ff
     l_r_lock: ff
     l_center_lock: ff
-- tocks: .25
+- tocks: 2
   lights:
     l_left_lock: 0
     l_r_lock: 0
@@ -41,8 +41,8 @@
     l_left_lock: ff
     l_r_lock: ff
     l_center_lock: ff
-- tocks: .25
+- tocks: 2
   lights:
     l_left_lock: 0
     l_r_lock: 0
-    l_center_lock: 0           
+    l_center_lock: 0

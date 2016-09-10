@@ -50,7 +50,7 @@ modes:
   - base
   - attract
   - skill_shot
-  - high_score
+  #- high_score
   - tilt
   #- credit
 
@@ -75,7 +75,7 @@ shots:
     switch: s_k_target
     light: l_k_target
     profile: hit_me
-  shot_shot_i_target:
+  shot_i_target:
     switch: s_i_target
     light: l_i_target
     profile: hit_me
@@ -94,19 +94,19 @@ shots:
   shot_lane_1:
     switch: s_lane_1
     light: l_lane_1
-    profile: hit_me
+    profile: light_me
   shot_lane_2:
     switch: s_lane_2
     light: l_lane_2
-    profile: hit_me
+    profile: light_me
   shot_lane_3:
     switch: s_lane_1
     light: l_lane_1
-    profile: hit_me
+    profile: light_me
   shot_lane_4:
     switch: s_lane_4
     light: l_lane_4
-    profile: hit_me
+    profile: light_me
   shot_right_orbit_made:
     switch_sequence: s_r_rollunder, s_l_rollunder
     time: 2s
@@ -131,12 +131,14 @@ shot_profiles:
         states:
           - name: lit
             light_script: flash
+            tocks_per_sec: 10
           - name: complete
             light_script: "on"
     hit_me_out:
         states:
           - name: lit
             light_script: flash_fast
+            tocks_per_sec: 50            
           - name: complete
             light_script: "off"
     light_me:
@@ -161,9 +163,9 @@ light_scripts:
         - tocks: 1
           color: 0
     flash_fast:
-        - tocks: .5
+        - tocks: 1
           color: ff
-        - tocks: .5
+        - tocks: 1
           color: 0
     on:
         - tocks: 1
@@ -187,14 +189,14 @@ ball_devices:
     outhole:
         ball_switches: s_outhole
         eject_coil: c_outhole
-        entrance_count_delay: 300ms
+        entrance_count_delay: 300
         confirm_eject_type: target
         eject_targets: trough
         tags: drain
     trough:
         ball_switches: s_r_trough, s_l_trough
         eject_coil: c_ball_trough_feeder
-        entrance_count_delay: 300ms
+        entrance_count_delay: 300
         confirm_eject_type: target
         eject_targets: plunger_lane
         tags: home, trough
@@ -206,15 +208,15 @@ ball_devices:
     center_eject:
         ball_switches: s_c_eject
         eject_coil: c_center_eject_hole
-        eject_timeouts: 500ms
+        eject_timeouts: 500
     left_eject:
         ball_switches: s_l_eject
         eject_coil: c_left_eject_hole
-        eject_timeouts: 500ms
+        eject_timeouts: 500
     ramp_eject:
         ball_switches: s_upper_left_kicker
         eject_coil: c_upper_left_kicker
-        eject_timeouts: 500ms
+        eject_timeouts: 500
 
 #sound_player:
 #    Lane_sound_off:
@@ -471,7 +473,7 @@ coils:
     number: c01
   c_ball_trough_feeder:
     number: c02
-    pulse_ms: 20
+    pulse_ms: 50
   c_left_eject_hole:
     number: c03
   c_center_eject_hole:
@@ -502,15 +504,15 @@ coils:
   c_ramp_up:
     number: c13c
     pulse_events: raise_ramp_up
-    pulse_ms: 20ms
+    pulse_ms: 20
   c_ramp_down:
     number: c14c
     pulse_events: lower_ramp
-    pulse_ms: 20ms
+    pulse_ms: 20
   c_drop_target:
     number: c15c
     pulse_events: reset_drop_target
-    pulse_ms: 20ms
+    pulse_ms: 20
   c_coin_lockout:
     number: c16
   c_left_kicker:
@@ -530,23 +532,23 @@ flashers:
   f_rear_playfield_flashers:
     number: c05a
     flash_events: rear_playfield_flash
-    pulse_ms: 500ms
+    pulse_ms: 500
   f_l_lightning_bolt:
     number: c07
     flash_events: left_lightning_bolt_flash
-    pulse_ms: 500ms
+    pulse_ms: 500
   f_r_lightning_bolt:
     number: c08
     flash_events: right_lightning_bolt_flash
-    pulse_ms: 500ms
+    pulse_ms: 500
   f_mid_insert_board:
     number: c14a
     flash_events: mid_insert_board_flash
-    pulse_ms: 500ms
+    pulse_ms: 500
   f_bikes_flasher:
     number: c15a
     flash_events: bikes_flash
-    pulse_ms: 500ms
+    pulse_ms: 500
 
 matrix_lights:
     l_game_over_backbox:

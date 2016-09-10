@@ -198,62 +198,62 @@ light_player:
     shot_6_active:
       - show: 1_9_k_light_show
         repeat: yes
-        tocks_per_sec: 2
+        tocks_per_sec: 10
     shot_8_complete:
       - show: 1_9_k_light_show
         action: stop
     shot_1_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 20
     shot_2_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 10
     shot_3_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 20
     shot_4_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 10
     shot_5_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 20
     shot_6_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 10
     shot_7_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 20
     shot_8_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 10
     shot_9_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 4
+        tocks_per_sec: 20
     shot_10_complete:
       - show: 1_9_k_light_show
         repeat: no
-        tocks_per_sec: 6
+        tocks_per_sec: 15
     shot_10_complete:
       - show: road_kings_letters_light_show
         repeat: no
-        tocks_per_sec: 6
+        tocks_per_sec: 12
     shot_10_complete:
       - show: center_ramp_light_show
         repeat: no
-        tocks_per_sec: 6
+        tocks_per_sec: 12
     shot_10_complete:
       - show: bonus_V_light_show
         repeat: no
-        tocks_per_sec: 6
+        tocks_per_sec: 12
 slide_player:
     timer_the_end_tick:
     - type: text

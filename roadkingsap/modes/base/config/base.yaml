@@ -1,4 +1,4 @@
-#config_version=3
+  #config_version=3
 mode:
     start_events: ball_starting
     priority: 100
@@ -46,7 +46,7 @@ slide_player:
 light_player:
   group_rollover_lanes_default_lit_complete:
     show: group_rollover_lanes_complete
-    tocks_per_sec: 20
+    tocks_per_sec: 40
     repeat: yes
     num_repeats: 10
     priority: 1
@@ -100,7 +100,7 @@ scoring:
         score: 2000
     s_bottom_jet_active:
         score: 2000
-    s_drop_target_activeL:
+    s_drop_target_active:
         score: 5000
     s_r_rollunder_active:
         score: 2500
@@ -120,7 +120,7 @@ scoring:
         score: 1000
     s_c_ramp_enter_active:
         score: 1000
-    s_cent_ramp_r_exit:
+    s_cent_ramp_r_exit_active:
         score: 1000
 
 shot_groups:

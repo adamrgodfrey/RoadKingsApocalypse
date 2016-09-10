@@ -29,7 +29,7 @@ light_player:
     mode_red_skulls_started:
       - show: bonus_V_light_show
         repeat: yes
-        tocks_per_sec: 4
+        tocks_per_sec: 40
     mode_skill_shot_stopped:
       - show: bonus_V_light_show
         action: stop

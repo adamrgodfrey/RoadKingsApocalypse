@@ -9,14 +9,33 @@ show_player:
 light_player:
     mode_attract_started:
       - show: 1_9_k_light_show
-        repeat: yes
-        tocks_per_sec: 2
+        repeat: no
+        tocks_per_sec: 30
       - show: road_kings_letters_light_show
         repeat: yes
-        tocks_per_sec: 2
-
+        tocks_per_sec: 20
+      - show: all_lock_light_show
+        repeat: no
+        tocks_per_sec: 40
+      - show: bonus_V_light_show
+        repeat: yes
+        tocks_per_sec: 80
+      - show: special_light_show
+        repeat: yes
+        tocks_per_sec: 80
+      - show: apron_swing_light_show
+        repeat: yes
+        tocks_per_sec: 120
     mode_attract_stopped:
       - show: 1_9_k_light_show
         action: stop
       - show: road_kings_letters_light_show
+        action: stop
+      - show: all_lock_light_show
+        action: stop
+      - show: bonus_V_light_show
+        action: stop
+      - show: special_light_show
+        action: stop
+      - show: apron_swing_light_show
         action: stop
