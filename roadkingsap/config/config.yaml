@@ -475,6 +475,7 @@ system11:
 coils:
   c_outhole:
     number: c01
+    pulse_ms: 100
   c_ball_trough_feeder:
     number: c02
     pulse_ms: 50
@@ -482,6 +483,7 @@ coils:
     number: c03
   c_center_eject_hole:
     number: c04
+    pulse_ms: 15    
   c_upper_left_kicker:
     number: c05c
   c_power_kicker_l_outlane:
@@ -521,8 +523,10 @@ coils:
     number: c16
   c_left_kicker:
     number: c17
+    recycle: true
   c_right_kicker:
     number: c18
+    recycle: true
   c_upper_jet_bumper:
     number: c19
   c_left_jet_bumper:

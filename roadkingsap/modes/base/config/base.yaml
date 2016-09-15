@@ -6,14 +6,18 @@ mode:
 event_player:
     ball_starting:
         cmd_flippers_enable
+        reset_drop_target
+        lower_ramp
     ball_ending:
         cmd_flippers_disable
     tilt:
         cmd_flippers_disable
         c_gen_illumination_relay
-
     slam_tilt:
         cmd_flippers_disable
+    mode_base_started:
+        reset_drop_target
+        lower_ramp
 
 slide_player:
   mode_base_started:

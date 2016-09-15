@@ -6,26 +6,47 @@ show_player:
       repeat: yes
       tocks_per_sec: 1
 
+- tocks: 2
+  display:
+    - type: text
+      text: "%machine|score1_label%"
+      v_pos: top
+      y: 4
+    - type: text
+      text: "%machine|score1_name% %machine|score1_value%"
+      v_pos: bottom
+      number_grouping: true
+      y: -3
+    - type: shape
+      shape: box
+      width: 128
+      height: 32
+    - type: shape
+      shape: box
+      width: 126
+      height: 30
+      shade: 8
+
 light_player:
     mode_attract_started:
       - show: 1_9_k_light_show
-        repeat: no
-        tocks_per_sec: 30
+        repeat: yes
+        tocks_per_sec: 15
       - show: road_kings_letters_light_show
         repeat: yes
-        tocks_per_sec: 20
+        tocks_per_sec: 25
       - show: all_lock_light_show
-        repeat: no
-        tocks_per_sec: 40
+        repeat: yes
+        tocks_per_sec: 20
       - show: bonus_V_light_show
         repeat: yes
-        tocks_per_sec: 80
+        tocks_per_sec: 30
       - show: special_light_show
         repeat: yes
-        tocks_per_sec: 80
+        tocks_per_sec: 40
       - show: apron_swing_light_show
         repeat: yes
-        tocks_per_sec: 120
+        tocks_per_sec: 60
     mode_attract_stopped:
       - show: 1_9_k_light_show
         action: stop

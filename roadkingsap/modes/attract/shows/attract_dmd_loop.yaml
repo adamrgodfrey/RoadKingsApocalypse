@@ -48,6 +48,26 @@
         type: move_in
         duration: 1s
         direction: right
+- tocks: 2
+  display:
+    - type: text
+      text: "1. %machine|score2_name% %machine|score2_value%"
+      v_pos: top
+      h_pos: left
+      number_grouping: true
+      y: 3
+      x: 12
+    - type: text
+      text: "2. %machine|score3_name% %machine|score3_value%"
+      v_pos: bottom
+      h_pos: left
+      number_grouping: true
+      y: -3
+      x: 10
+      transition:
+        type: move_out
+        duration: 1s
+        direction: top        
 - tocks: 10
   display:
     - type: Image

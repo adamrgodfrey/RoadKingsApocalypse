@@ -1,5 +1,11 @@
 #config_version=3
 
+event_player:
+    mode_high_score_started:
+        cmd_flippers_enable
+    mode_high_score_ending:
+        cmd_flippers_disable
+
 high_score:
   categories:
   - score:
@@ -35,7 +41,7 @@ slide_player:
       font: medium
       v_pos: bottom
       selected_char_color: 0
-      selected_char_bg: 15
+      selected_char_bg: FF0000
       char_x_offset: 1
       char_y_offset: 1
       char_width: 7
