@@ -50,7 +50,7 @@ modes:
   - base
   - attract
   - skill_shot
-  #- high_score
+  - high_score
   - tilt
   #- credit
   #- bonus
@@ -483,7 +483,7 @@ coils:
     number: c03
   c_center_eject_hole:
     number: c04
-    pulse_ms: 15    
+    pulse_ms: 15
   c_upper_left_kicker:
     number: c05c
   c_power_kicker_l_outlane:
